@@ -1,8 +1,10 @@
-
+import Navbar from "./Components/Primary Components/Navbar"
 
 function App() {
-  return (
-    <div className='bg-stone-600'>App</div>
+  return(
+    <div>
+        <Navbar/>
+    </div>
   )
 }
 
