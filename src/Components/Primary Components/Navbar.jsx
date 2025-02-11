@@ -4,7 +4,7 @@ import { arrow, logoIcon, ticz } from "../../images"
 
 function Navbar() {
   return (
-    <nav className="navbar flex justify-between w-[85%] border-[#197686] border-[1px] bg-[rgba(5, 37, 44, 0.40)] h-[60px] md:h-[76px] py-[12px] px-[16px] rounded-[24px] items-center mt-[20px]">
+    <nav className="navbar sticky flex justify-between w-[85%] border-[#197686] border-[1px] bg-[rgba(5, 37, 44, 0.40)] h-[60px] md:h-[76px] py-[12px] px-[16px] rounded-[24px] items-center mt-[20px]">
         <div className="flex gap-[8px]">
             <img src={logoIcon} alt="logoIcon" />
             <img src={ticz} alt="ticz" />

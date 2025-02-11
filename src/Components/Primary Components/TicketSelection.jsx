@@ -18,8 +18,8 @@ function TicketSelection() {
             </div>
 
             <hr className="bg-[#07373F] h-[4px] rounded-sm"/>
-            <div>
-                <p>Select Ticket Type</p>
+            <div className="text-white">
+                <p className="">Select Ticket Type</p>
                 <div>
 
                 </div>
