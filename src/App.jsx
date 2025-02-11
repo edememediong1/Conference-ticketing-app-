@@ -4,7 +4,7 @@ import TicketSelection from "./Components/Primary Components/TicketSelection"
 
 function App() {
   return(
-    <div className="body h-screen flex flex-col justify-start items-center gap-10">
+    <div className="body flex flex-col justify-start items-center gap-10">
         <Navbar />
         <TicketSelection/>
     </div>

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 25rem;
+  --breakpoint-ms: 35rem;
+  --breakpoint-ls: 55rem;
+}
+
 
 @layer base{
     @font-face {
@@ -15,5 +21,18 @@
     .navbar {
         background-color: rgba(5, 37, 44, 0.40);
 
+    }
+
+    .banner{
+        border-radius: 24px;
+        border-right: 2px solid #07373F;
+        border-bottom: 2px solid #07373F;
+        border-left: 2px solid #07373F;
+        background: radial-gradient(57.42% 106.59% at 14.02% 32.06%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), rgba(10, 12, 17, 0.10);
+        backdrop-filter: blur(7px);
+    }
+
+    .banner-head{
+        font-family: "Road Rage", serif;
     }
 }
