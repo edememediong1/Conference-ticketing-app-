@@ -1,4 +1,4 @@
-
+import TicketType from "../Secondary Components/TicketType"
 
 function TicketSelection() {
   return (
@@ -21,7 +21,7 @@ function TicketSelection() {
             <div className="text-white">
                 <p className="">Select Ticket Type</p>
                 <div>
-
+                    <TicketType/>
                 </div>
             </div>
 

@@ -5,7 +5,7 @@ function TicketType() {
         {
             categories: "REGULAR ACCESS",
             slots: 50,
-            price: "Free",
+            price: 0,
             id: 1
 
         },
@@ -26,8 +26,12 @@ function TicketType() {
   return (
     <div>
         {ticketDesc.map((data) => {
-            return <div key={data.id}>
-                
+            return <div key={data.id} className="flex ">
+                <div>
+                    <p>{data.categories}</p>
+                    <p>{data.slots}slots left!</p>
+                </div>
+                <p>{data.price == 0 && "Free"}</p>
             </div> 
         })}
 
