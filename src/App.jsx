@@ -86,37 +86,47 @@ function App() {
 
 
   return(
-    <div className="body flex flex-col justify-start items-center gap-10">
-        <Navbar />
+    <>
+        
         {step === 1 && (
-          <TicketSelection 
-            ticketDesc={ticketDesc}
-            selectedTicket={selectedTicketType} 
-            setSelectedTicket={setSelectedTicketType}
-            quantity={quantity}
-            setQuantity={setQuantity}
-            onNext={handleNext}
-            onCancel={handleCancel}
-          />)}
-          {step === 2 && (
-            <TicketForm
-              userDetails={userDetails}
-              setUserDetails={setUserDetails}
-              onNext={handleNext}
-              onBack={handleBack}
-            />
-          )}
-          {step === 3 && (
-            <TicketView
+          <div className="body flex flex-col justify-start items-center gap-10">
+            <Navbar />
+            <TicketSelection 
               ticketDesc={ticketDesc}
-              selectedTicketType={selectedTicketType}
+              selectedTicket={selectedTicketType} 
+              setSelectedTicket={setSelectedTicketType}
               quantity={quantity}
-              userDetails={userDetails}
-              onBack={handleBack}
+              setQuantity={setQuantity}
+              onNext={handleNext}
               onCancel={handleCancel}
             />
+          </div>
           )}
-    </div>
+          {step === 2 && (
+            <div className="body flex flex-col justify-start items-center gap-10">
+              <Navbar/>
+              <TicketForm
+                userDetails={userDetails}
+                setUserDetails={setUserDetails}
+                onNext={handleNext}
+                onBack={handleBack}
+              />
+            </div>
+          )}
+          {step === 3 && (
+            <div className="body h-screen flex flex-col justify-start items-center gap-10">
+                <TicketView
+                ticketDesc={ticketDesc}
+                selectedTicketType={selectedTicketType}
+                quantity={quantity}
+                userDetails={userDetails}
+                onBack={handleBack}
+                onCancel={handleCancel}
+              />
+            </div>
+            
+          )}
+    </>
   )
 }
 
