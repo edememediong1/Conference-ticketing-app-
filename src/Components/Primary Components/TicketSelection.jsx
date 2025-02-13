@@ -19,10 +19,8 @@ function TicketSelection() {
 
             <hr className="bg-[#07373F] h-[4px] rounded-sm"/>
             <div className="text-white">
-                <p className="">Select Ticket Type</p>
-                <div>
-                    <TicketType/>
-                </div>
+                <p className="text-[20px] font-bold mb-3">Select Ticket Type</p>
+                <TicketType/>
             </div>
 
         </article>
