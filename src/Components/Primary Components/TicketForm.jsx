@@ -23,7 +23,7 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
     
       const handleSubmit = (e) => {
         e.preventDefault()
-        if (!userDetails.name || !userDetails.email || !userDetails.phone || !userDetails.image) {
+        if (!userDetails.name || !userDetails.email || !userDetails.image) {
           setError("Please fill in all fields and upload an image.")
         } else {
           onNext()
