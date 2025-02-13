@@ -28,7 +28,7 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
                         <p>📅 March 15, 2025 | 7:00 PM</p>
 
                         <div className="w-[140px] h-[140px] border-[4px] border-[#197686] ">
-                            <img src="" alt="image display" />
+                            <img src={userDetails.image} alt="image display" />
                         </div>
 
                         <div>
