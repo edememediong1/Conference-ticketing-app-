@@ -61,8 +61,8 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
                 </div>
             </section>
             <div>
-                <label htmlFor="name" className="text-white">
-                    Name
+                <label htmlFor="name" className="text-[#FAFAFA]">
+                    Enter your name
                 </label>
                 <input
                     type="text"
@@ -70,12 +70,12 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
                     name="name"
                     value={userDetails.name}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-[#0a8398] p-3 border-[1px] outline-0 focus:bg-[#08252B] rounded-12px"
                 />
             </div>
             <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email
+                <label htmlFor="email" className="block text-[#FAFAFA]">
+                    Enter your email
                 </label>
                 <input
                     type="email"
@@ -83,11 +83,11 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
                     name="email"
                     value={userDetails.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-[#0a8398] p-3 border-[1px] outline-0 focus:bg-[#08252B] rounded-12px"
                 />
             </div>
             <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="phone" className="block text-[#FAFAFA]">
                     About the Project
                 </label>
                 <textarea 
@@ -95,7 +95,7 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
                     id="about"
                     value={userDetails.about}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="text-white mt-1 block w-full rounded-md border-[#0a8398] p-3 border-[1px] outline-0 focus:bg-[#08252B] rounded-12px"
                     
                 ></textarea>
         

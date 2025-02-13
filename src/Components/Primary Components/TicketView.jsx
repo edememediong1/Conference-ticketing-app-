@@ -5,52 +5,52 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
     const selectedTicketData = ticketDesc.find((ticket) => ticket.id=== selectedTicketType)
   
     return (
-    <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[70%] md:w-[55%] md:p-[48px] rounded-2xl space-y-6 mt-[20vh]">
+    <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[50%] md:p-[48px] rounded-2xl space-y-6 mt-[20vh]">
         <section className="flex-col justify-center items-center space-y-3">
             <div className="text-white md:flex md:justify-between md:items-center">
                 <h1 className="text-[24px] md:text-[32px]">Attendee Details</h1>
-                <p>Step 3/3</p>
+                <p className="font-roboto">Step 3/3</p>
             </div>
             <div className="bg-[#0E464F] h-[4px] w-full rounded-sm"></div>
         </section>
 
-        <section className='text-white text-center'>
+        <section className='text-white text-center font-roboto space-y-5 my-10'>
             <p className='text-[24px] md:text-[32px]'>Your Ticket is Booked</p>
             <p>Check your email for a copy or you can <strong>download</strong></p>
         </section>
 
-        <section className='card border-[#197686] border-[1px] w-[400px] ms:w-[80%] m-auto h-[600px]' >
-            <div>
-                <div className="w-full text-white">
-                    <div className="border-[1px] border-[#197686] flex flex-col justify-center items-center">
-                        <h1>Techember Fest&apos;25</h1>
-                        <p>📍 04 Rumens road, Ikoyi, Lagos</p>
-                        <p>📅 March 15, 2025 | 7:00 PM</p>
+        <section className='card  w-[300px] ms:w-[70%] m-auto h-[600px] p-5 ' >
+            <div className="border-[1px] border-[#197686] rounded-[12px]">
+                <div className="w-full text-white ">
+                    <div className="border-[1px] border-[#197686] flex flex-col justify-center items-center p-[16px]">
+                        <h1 className="font-rage text-[40px]">Techember Fest&apos;25</h1>
+                        <p className="font-roboto">📍 04 Rumens road, Ikoyi, Lagos</p>
+                        <p className="font-roboto">📅 March 15, 2025 | 7:00 PM</p>
 
-                        <div className="w-[140px] h-[140px] border-[4px] border-[#197686] ">
-                            <img src={userDetails.image} alt="image display" />
+                        <div className="w-[140px] h-[140px] border-[4px] border-[#197686] my-10 rounded-md">
+                            {userDetails.image && <img src={userDetails.image} className="w-full h-full" alt="user image" />}
                         </div>
 
-                        <div>
-                            <div>
-                                <p>Enter your name</p>
-                                <p>{userDetails.name}</p>
+                        <div className="font-roboto grid grid-cols-2 bg-[#08343C] p-1 gap-1 rounded-[12px] border-[#133D44] border-[1.5px]">
+                            <div className="border-[#133D44] border-r-[1.5px] p-2 border-b-[1.5px]">
+                                <p className=" text-[#fff] text-[15px] opacity-[0.33] font-roboto font-[400]">Enter your name</p>
+                                <p className="text-[14px] font-roboto font-[400]">{userDetails.name}</p>
                             </div>
-                            <div>
-                                <p>Enter your email</p>
-                                <p>{userDetails.email}</p>
+                            <div className="border-[#133D44] p-2 border-b-[1.5px]">
+                                <p className="text-[#fff] text-[15px] opacity-[0.33] font-roboto font-[400]">Enter your email</p>
+                                <p className="text-[14px] font-roboto font-[400]">{userDetails.email}</p>
                             </div>
-                            <div>
-                                <p>Ticket Type</p>
-                                <p>{selectedTicketData.categories}</p>
+                            <div className="border-[#133D44] border-r-[1.5px] p-2 border-b-[1.5px]">
+                                <p className='text-[#fff] text-[15px] opacity-[0.33] font-roboto font-[400]'>Ticket Type</p>
+                                <p className="text-[14px] font-roboto font-[400]">{selectedTicketData.categories}</p>
                             </div>
-                            <div>
-                                <p>Ticket for</p>
-                                <p>{quantity}</p>
+                            <div className="border-[#133D44] p-2 border-b-[1.5px]">
+                                <p className="text-[#fff] text-[15px] opacity-[0.33] font-roboto font-[400]">Ticket for</p>
+                                <p className="text-[14px] font-roboto font-[400]">{quantity}</p>
                             </div>
-                            <div>
-                                <p>Special request?</p>
-                                <p>{userDetails.about}</p>
+                            <div className="py-3 p-2">
+                                <p className="text-[#fff] text-[15px] opacity-[0.33] font-roboto font-[400]">Special request?</p>
+                                <p className="text-[15px] font-roboto font-[400]">{userDetails.about}</p>
                             </div>
                         </div>
                     </div>

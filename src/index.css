@@ -6,6 +6,11 @@
   --breakpoint-ls: 55rem;
 }
 
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-rage: "Road Rage", serif; 
+}
+
 
 @layer base{
     @font-face {
