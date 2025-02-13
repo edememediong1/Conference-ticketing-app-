@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import Navbar from "./Components/Primary Components/Navbar"
 import TicketSelection from "./Components/Primary Components/TicketSelection"
-
+import TicketForm from "./Components/Primary Components/TicketForm"
+import TicketView from "./Components/Primary Components/TicketView"
 
 function App() {
   const ticketDesc = [
@@ -87,7 +88,34 @@ function App() {
   return(
     <div className="body flex flex-col justify-start items-center gap-10">
         <Navbar />
-        <TicketSelection handleActiveType={handleActiveType} selectedTicketType={selectedTicketType} ticketDes={ticketDesc}/>
+        {step === 1 && (
+          <TicketSelection 
+            ticketDesc={ticketDesc}
+            selectedTicketType={selectedTicketType} 
+            setSelectedTicketType={setSelectedTicketType}
+            quantity={quantity}
+            setQuantity={setQuantity}
+            onNext={handleNext}
+            onCancel={handleCancel}
+          />)}
+          {step === 2 && (
+            <TicketForm
+              userDetails={userDetails}
+              setUserDetails={setUserDetails}
+              onNext={handleNext}
+              onBack={handleBack}
+            />
+          )}
+          {step === 3 && (
+            <TicketView
+              ticketDesc={ticketDesc}
+              selectedTicketType={selectedTicketType}
+              quantity={quantity}
+              userDetails={userDetails}
+              onBack={handleBack}
+              onCancel={handleCancel}
+            />
+          )}
     </div>
   )
 }
