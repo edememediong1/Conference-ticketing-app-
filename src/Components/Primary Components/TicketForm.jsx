@@ -31,7 +31,7 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
       }
   
     return (
-    <div className="w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[60%] md:p-[48px] rounded-2xl space-y-6">
+    <div className="w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[60%] md:p-[48px] rounded-2xl space-y-6 mt-[20vh]">
         <section className="flex-col justify-center items-center space-y-3">
             <div className="text-white md:flex md:justify-between md:items-center">
                 <h1 className="text-[24px] md:text-[32px]">Attendee Details</h1>

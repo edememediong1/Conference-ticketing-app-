@@ -5,7 +5,7 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
     const selectedTicketData = ticketDesc.find((ticket) => ticket.id=== selectedTicketType)
   
     return (
-    <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[70%] md:w-[55%] md:p-[48px] rounded-2xl space-y-6">
+    <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[70%] md:w-[55%] md:p-[48px] rounded-2xl space-y-6 mt-[20vh]">
         <section className="flex-col justify-center items-center space-y-3">
             <div className="text-white md:flex md:justify-between md:items-center">
                 <h1 className="text-[24px] md:text-[32px]">Attendee Details</h1>
@@ -34,23 +34,23 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
                         <div>
                             <div>
                                 <p>Enter your name</p>
-                                <p></p>
+                                <p>{userDetails.name}</p>
                             </div>
                             <div>
                                 <p>Enter your email</p>
-                                <p></p>
+                                <p>{userDetails.email}</p>
                             </div>
                             <div>
                                 <p>Ticket Type</p>
-                                <p></p>
+                                <p>{selectedTicketData.categories}</p>
                             </div>
                             <div>
                                 <p>Ticket for</p>
-                                <p></p>
+                                <p>{quantity}</p>
                             </div>
                             <div>
                                 <p>Special request?</p>
-                                <p></p>
+                                <p>{userDetails.about}</p>
                             </div>
                         </div>
                     </div>
