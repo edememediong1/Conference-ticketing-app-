@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Navbar from "./Components/Primary Components/Navbar"
 import TicketSelection from "./Components/Primary Components/TicketSelection"
 
@@ -35,6 +35,32 @@ function App() {
     email: "",
     about: ""
   })
+  
+  useEffect(() => {
+    //Load saved data from Localstorage when the component mounts
+
+    const savedData = localStorage.getItem("ticketBookingData")
+      if (savedData) {
+        const parsedData = JSON.parse(savedData)
+        setStep(parsedData.step)
+        setSelectedTicketType(parsedData.selectedTicketType)
+        setQuantity(parsedData.quantity)
+        setUserDetails(parsedData.userDetails)
+      }
+  }, [])
+
+  useEffect(() => {
+    //Save data to localStorage whenever it changes
+    const dataToSave = {
+      step,
+      selectedTicketType,
+      quantity,
+      userDetails
+    }
+
+    localStorage.setItem("ticketBookingData", JSON.stringify(dataToSave))
+  }, [step, selectedTicketType, quantity, userDetails])
+  
     
   function handleNext(){
     setStep(step + 1)
