@@ -121,7 +121,6 @@ function App() {
                 selectedTicketType={selectedTicketType}
                 quantity={quantity}
                 userDetails={userDetails}
-                onBack={handleBack}
                 onCancel={handleCancel}
               />
             </div>

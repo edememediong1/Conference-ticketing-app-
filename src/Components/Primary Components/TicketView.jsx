@@ -1,7 +1,10 @@
 // import React from 'react'
 
-function TicketView() {
-  return (
+function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCancel}) {
+    
+    const selectedTicketData = ticketDesc.find((ticket) => ticket.id=== selectedTicketType)
+  
+    return (
     <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[70%] md:w-[55%] md:p-[48px] rounded-2xl space-y-6">
         <section className="flex-col justify-center items-center space-y-3">
             <div className="text-white md:flex md:justify-between md:items-center">
