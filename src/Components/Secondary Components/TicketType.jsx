@@ -1,7 +1,8 @@
 // import React from 'react'
 
 
-function TicketType({ticketDesc, handleActiveType, selectedTicketType}) {
+function TicketType({ticketDesc, selectedTicketType, setSelectedTicketType,  quantity, setQuantity, onNext, onCancel}) {
+    
     function handleActiveType(id){
         setSelectedTicketType(id)
     }
