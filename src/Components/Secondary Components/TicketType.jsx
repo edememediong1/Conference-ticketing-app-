@@ -58,7 +58,7 @@ function TicketType({ticketDesc, selectedTicketType, setSelectedTicketType,  qua
                 onQuantityChange={handleQuantityChange}
             />
         </section>)}
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500 mt-2">{error}</p>}
         <div className="flex flex-col gap-4 md:flex md:flex-row-reverse md:justify-around mt-6 md:px-8 md:border-[#07373F] md:border-[1px] md:rounded-[12px]">
             <button className=" w-full p-[12px] border-[#24A0B5] border-[1px] hover:bg-[#24A0B5] text-white rounded-[12px]" onClick={handleNext}>
                 Next
