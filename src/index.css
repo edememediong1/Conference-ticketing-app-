@@ -35,4 +35,9 @@
     .banner-head{
         font-family: "Road Rage", serif;
     }
+
+    .card{
+        backdrop-filter: blur(2px);
+        background: rgba(3, 30, 33, 0.10);
+    }
 }

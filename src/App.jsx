@@ -115,6 +115,7 @@ function App() {
           )}
           {step === 3 && (
             <div className="body h-screen flex flex-col justify-start items-center gap-10">
+                <Navbar/>
                 <TicketView
                 ticketDesc={ticketDesc}
                 selectedTicketType={selectedTicketType}
