@@ -1,6 +1,6 @@
 import TicketType from "../Secondary Components/TicketType"
 
-function TicketSelection({ticketDesc, selectedTicketType, setSelectedTicketType,  quantity, setQuantity, onNext, onCancel}) {
+function TicketSelection({ticketDesc, selectedTicket, setSelectedTicket,  quantity, setQuantity, onNext, onCancel}) {
   return (
     <div className="w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[55%] md:p-[48px] rounded-2xl space-y-6">
         <section className="flex-col justify-center items-center space-y-3">
@@ -21,8 +21,8 @@ function TicketSelection({ticketDesc, selectedTicketType, setSelectedTicketType,
             <div className="text-white">
                 <TicketType
                     ticketDesc={ticketDesc}
-                    selectedTicketType={selectedTicketType} 
-                    setSelectedTicketType={setSelectedTicketType}
+                    selectedTicketType={selectedTicket} 
+                    setSelectedTicketType={setSelectedTicket}
                     quantity={quantity}
                     setQuantity={setQuantity}
                     onNext={onNext}

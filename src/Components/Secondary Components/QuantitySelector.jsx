@@ -12,7 +12,7 @@ function QuantitySelector({quantity, maxQuantity, onQuantityChange}) {
         onChange={(e)=> onQuantityChange(Number.parseInt(e.target.value))}
         >
             {[...Array(maxQuantity + 1).keys()].map((num) => (
-                <option key={num} value={num}>{num}</option>
+                <option className="bg-[#07373F]" key={num} value={num}>{num}</option>
             ))}
 
         </select>

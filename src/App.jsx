@@ -91,8 +91,8 @@ function App() {
         {step === 1 && (
           <TicketSelection 
             ticketDesc={ticketDesc}
-            selectedTicketType={selectedTicketType} 
-            setSelectedTicketType={setSelectedTicketType}
+            selectedTicket={selectedTicketType} 
+            setSelectedTicket={setSelectedTicketType}
             quantity={quantity}
             setQuantity={setQuantity}
             onNext={handleNext}
