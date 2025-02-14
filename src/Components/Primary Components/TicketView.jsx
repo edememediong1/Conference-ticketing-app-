@@ -5,7 +5,7 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
     const selectedTicketData = ticketDesc.find((ticket) => ticket.id=== selectedTicketType)
   
     return (
-    <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[50%] md:p-[48px] rounded-2xl space-y-6 mt-[20vh]">
+    <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[50%] md:p-[48px] rounded-2xl space-y-6 my-[20vh]">
         <section className="flex-col justify-center items-center space-y-3">
             <div className="text-white md:flex md:justify-between md:items-center">
                 <h1 className="text-[24px] md:text-[32px]">Attendee Details</h1>
@@ -20,9 +20,9 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
         </section>
 
         <section className='card  w-[300px] ms:w-[70%] m-auto h-[600px] p-5 ' >
-            <div className="border-[1px] border-[#197686] rounded-[12px]">
-                <div className="w-full text-white ">
-                    <div className="border-[1px] border-[#197686] flex flex-col justify-center items-center p-[16px]">
+            <div className="">
+                <div className="w-full text-white border-[1px] border-[#197686] rounded-[24px] p-4">
+                    <div className="border-[1px] border-[#197686] flex flex-col justify-center items-center p-[14px] rounded-[24px]">
                         <h1 className="font-rage text-[40px]">Techember Fest&apos;25</h1>
                         <p className="font-roboto">📍 04 Rumens road, Ikoyi, Lagos</p>
                         <p className="font-roboto">📅 March 15, 2025 | 7:00 PM</p>
@@ -31,7 +31,7 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
                             {userDetails.image && <img src={userDetails.image} className="w-full h-full" alt="user image" />}
                         </div>
 
-                        <div className="font-roboto grid grid-cols-2 bg-[#08343C] p-1 gap-1 rounded-[12px] border-[#133D44] border-[1.5px]">
+                        <div className=" w-full font-roboto grid grid-cols-2 bg-[#08343C] p-1 gap-1 rounded-[12px] border-[#133D44] border-[1.5px]">
                             <div className="border-[#133D44] border-r-[1.5px] p-2 border-b-[1.5px]">
                                 <p className=" text-[#fff] text-[15px] opacity-[0.33] font-roboto font-[400]">Enter your name</p>
                                 <p className="text-[14px] font-roboto font-[400]">{userDetails.name}</p>

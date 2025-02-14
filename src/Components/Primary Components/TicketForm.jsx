@@ -10,15 +10,33 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
       setUserDetails((prev) => ({ ...prev, [name]: value }))
     }
     
-    const handleImageChange = (e) => {
+    const handleImageChange = async(e) => {
         const file = e.target.files[0]
-        if (file) {
-          const reader = new FileReader()
-          reader.onloadend = () => {
-            setUserDetails((prev) => ({ ...prev, image: reader.result }))
-          }
-          reader.readAsDataURL(file)
+        console.log(file)
+
+        if (!file) {
+            return
         }
+
+        const data = new FormData()
+        data.append("file", file)
+        data.append("upload_preset", "the_architect")
+        data.append("cloud_name", "dom0lws7q")
+
+        const res = await fetch("https://api.cloudinary.com/v1_1/dom0lws7q/image/upload", {
+            method: "POST",
+            body: data
+        })
+
+        const uplodedImageUrl = await res.json()
+        console.log(uplodedImageUrl)
+        // if (file) {
+        //   const reader = new FileReader()
+        //   reader.onloadend = () => {
+        //     setUserDetails((prev) => ({ ...prev, image: reader.result }))
+        //   }
+        //   reader.readAsDataURL(file)
+        // }
       }
     
       const handleSubmit = (e) => {
