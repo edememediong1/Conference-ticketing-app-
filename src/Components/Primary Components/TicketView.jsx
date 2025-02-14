@@ -1,8 +1,28 @@
 // import React from 'react'
+import {useRef} from 'react'
+import html2canvas from 'html2canvas'
+import jsPDF from 'jspdf'
+
 
 function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCancel}) {
     
     const selectedTicketData = ticketDesc.find((ticket) => ticket.id=== selectedTicketType)
+
+    const ticketRef = useRef(null)
+
+    //PDF download handler
+    const handleDownloadPDF = async () => {
+        if (ticketRef.current) {
+            const canvas = await html2canvas(ticketRef.current)
+            const imgData = canvas.toDataURL("image/png")
+            const pdf = new jsPDF()
+            const imgProps = pdf.getImageProperties(imgData)
+            const pdfWidth = pdf.internal.pageSize.getWidth()
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width
+            pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight)
+            pdf.save("ticket_preview.pdf")
+        }
+    }
   
     return (
     <div className=" w-[90%] bg-[#08252B] ms:bg-[#041E23] p-[24px] border-[#197686] border-[1px] ms:w-[60%] md:w-[50%] md:p-[48px] rounded-2xl space-y-6 my-[20vh]">
@@ -20,7 +40,7 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
         </section>
 
         <section className='card  w-[300px] ms:w-[70%] m-auto h-[600px] p-5 ' >
-            <div className="">
+            <div className="" ref={ticketRef}>
                 <div className="w-full text-white border-[1px] border-[#197686] rounded-[24px] p-4">
                     <div className="border-[1px] border-[#197686] flex flex-col justify-center items-center p-[14px] rounded-[24px]">
                         <h1 className="font-rage text-[40px]">Techember Fest&apos;25</h1>
@@ -61,8 +81,8 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
             </div>
         </section>
 
-        <div className="flex flex-col gap-4 md:flex md:flex-row-reverse md:justify-around mt-6 md:px-8 md:border-[#07373F] md:border-[1px] md:rounded-[12px]">
-            <button className=" w-full p-[12px] border-[#24A0B5] border-[1px] hover:bg-[#24A0B5] text-white rounded-[12px]" >
+        <div className="flex flex-col gap-4 md:flex md:flex-row-reverse md:justify-around md:px-8 md:border-[#07373F] md:border-[1px] md:rounded-[12px] mt-7">
+            <button className=" w-full p-[12px] border-[#24A0B5] border-[1px] hover:bg-[#24A0B5] text-white rounded-[12px]" onClick={handleDownloadPDF}>
                 Download Ticket
             </button>
             <button className="w-full p-[12px] border-[#24A0B5] border-[1px] hover:bg-[#24A0B5] text-white rounded-[12px]" onClick={onCancel}>
