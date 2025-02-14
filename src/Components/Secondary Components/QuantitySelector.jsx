@@ -7,7 +7,7 @@ function QuantitySelector({quantity, maxQuantity, onQuantityChange}) {
         <select 
         name="quantity" 
         id="quantity" 
-        className="w-full border-[#07373F] border-[1px] p-[12px] rounded-[12px]"
+        className="w-full border-[#07373F] border-[1px] p-[12px] rounded-[12px] outline-none font-roboto"
         value={quantity}
         onChange={(e)=> onQuantityChange(Number.parseInt(e.target.value))}
         >
