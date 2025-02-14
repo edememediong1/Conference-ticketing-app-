@@ -29,7 +29,8 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
         })
 
         const uplodedImageUrl = await res.json()
-        console.log(uplodedImageUrl)
+        console.log(uplodedImageUrl.url)
+        setUserDetails((prev) => ({ ...prev, image: uplodedImageUrl.url}))
         // if (file) {
         //   const reader = new FileReader()
         //   reader.onloadend = () => {
@@ -61,11 +62,13 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
             <section>
                 <p className='text-white mb-2'>Upload profile photo</p>
                 <div className="bg-[#000] w-full h-auto flex justify-center items-center rounded-[12px]">
-                    <div className='w-[240px] h-[240px] bg-[#0E464F] rounded-[12px]'>
-                    <div>
+                    <div className= {`w-[240px] h-[240px] rounded-[12px] bg-[#0E464F]`}>
+                        {/* {userDetails.image && <img src={userDetails.image} alt="image" />} */}
+                        <div>
                         {/* <label htmlFor="image" className="block text-sm font-medium text-gray-700">
                             Upload Image
                         </label> */}
+                        
                         <input
                             type="file"
                             id="image"
