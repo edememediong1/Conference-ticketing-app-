@@ -31,7 +31,9 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
                 <h1 className="text-[24px] md:text-[32px]">Attendee Details</h1>
                 <p className="font-roboto">Step 3/3</p>
             </div>
-            <div className="bg-[#0E464F] h-[4px] w-full rounded-sm"></div>
+            <div className="bg-[#0E464F] h-[4px] w-full rounded-sm">
+                <div className='h-full w-3/3 bg-[#24A0B5] rounded-sm'></div>
+            </div>
         </section>
 
         <section className='text-white text-center font-roboto space-y-5 my-10'>
@@ -40,8 +42,8 @@ function TicketView({ticketDesc, selectedTicketType, quantity, userDetails, onCa
         </section>
 
         <section className='card  w-[300px] ms:w-[70%] m-auto h-[600px] p-5 ' >
-            <div className="" ref={ticketRef}>
-                <div className="w-full text-white border-[1px] border-[#197686] rounded-[24px] p-4">
+            <div className="w-full h-full" ref={ticketRef}>
+                <div className="inner w-full text-white border-[1px] border-[#197686] rounded-[24px] p-4">
                     <div className="border-[1px] border-[#197686] flex flex-col justify-center items-center p-[14px] rounded-[24px]">
                         <h1 className="font-rage text-[40px]">Techember Fest&apos;25</h1>
                         <p className="font-roboto">📍 04 Rumens road, Ikoyi, Lagos</p>

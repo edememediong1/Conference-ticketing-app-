@@ -45,4 +45,15 @@
         backdrop-filter: blur(2px);
         background: rgba(3, 30, 33, 0.10);
     }
+
+    /* .inner {
+        -webkit-mask:
+        radial-gradient(circle 30px at top    left ,#0000 98%,#000) top    left,
+        radial-gradient(circle 30px at top    right,#0000 98%,#000) top    right,
+        radial-gradient(circle 30px at bottom left ,#0000 98%,#000) bottom left,
+        radial-gradient(circle 30px at bottom right,#0000 98%,#000) bottom right;
+        -webkit-mask-size:51% 51%;
+        -webkit-mask-repeat:no-repeat;
+    } */
+
 }

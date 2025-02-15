@@ -8,7 +8,9 @@ function TicketSelection({ticketDesc, selectedTicket, setSelectedTicket,  quanti
                 <h1 className="text-[24px] md:text-[32px]">Ticket Selection</h1>
                 <p>Step 1/3</p>
             </div>
-            <div className="bg-[#0E464F] h-[4px] w-full rounded-sm"></div>
+            <div className="bg-[#0E464F] h-[4px] w-full rounded-sm">
+                <div className='h-full w-1/3 bg-[#24A0B5] rounded-sm'></div>
+            </div>
         </section>
         <article className="space-y-6 bg-[#08252B] ms:p-[24px] ms:border-[1px] ms:border-[#197686] ms:rounded-[24px]">
             <div className="banner min-h-[243px] p-[10px] md:p-[24px] text-white text-center text-[14px] flex-col justify-center items-center space-y-4">

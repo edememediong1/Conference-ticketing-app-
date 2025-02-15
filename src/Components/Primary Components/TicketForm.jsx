@@ -56,7 +56,9 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
                 <h1 className="text-[24px] md:text-[32px]">Attendee Details</h1>
                 <p>Step 2/3</p>
             </div>
-            <div className="bg-[#0E464F] h-[4px] w-full rounded-sm"></div>
+            <div className="bg-[#0E464F] h-[4px] w-full rounded-sm">
+                <div className='h-full w-2/3 bg-[#24A0B5] rounded-sm'></div>
+            </div>
         </section>
         <form className="space-y-6 bg-[#08252B] ms:p-[24px] ms:border-[1px] ms:border-[#197686] ms:rounded-[24px]" onSubmit={handleSubmit}>
             <section>
