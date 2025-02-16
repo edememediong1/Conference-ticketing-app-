@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useState } from "react"
+import upload from "../../assets/Icon/cloud-download.svg"
 
 function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
     
@@ -64,12 +65,13 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
             <section>
                 <p className='text-white mb-2'>Upload profile photo</p>
                 <div className="bg-[#000] w-full h-auto flex justify-center items-center rounded-[12px]">
-                    <div className= {`w-[240px] h-[240px] rounded-[12px] bg-[#0E464F]`}>
+                    <div className= {`w-[240px] h-[240px] rounded-[12px] flex justify-center items-center p-4 text-center ${userDetails.image ? `bg-[url("${userDetails.image}")]` : "bg-[#0E464F]"}`}>
                         {/* {userDetails.image && <img src={userDetails.image} alt="image" />} */}
-                        <div>
-                        {/* <label htmlFor="image" className="block text-sm font-medium text-gray-700">
-                            Upload Image
-                        </label> */}
+                        {userDetails.image && <img src={userDetails.image} className="w-full h-full"/>}
+                        <label htmlFor="image" className=" font-roboto flex flex-col justify-center items-center gap-3">
+                            <img src={upload} alt="upload" />
+                            Drag & drop or click to upload
+                        </label> 
                         
                         <input
                             type="file"
@@ -77,9 +79,9 @@ function TicketForm({userDetails, setUserDetails, onNext, onBack}) {
                             name="image"
                             accept="image/*"
                             onChange={handleImageChange}
-                            className="mt-1 block w-full"
+                            className="mt-1 w-full hidden"
                         />
-                        </div>
+                    
                     </div>
                 </div>
             </section>
